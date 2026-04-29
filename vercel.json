@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "index.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "api/*.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/.netlify/functions/create-checkout",
+      "dest": "/api/create-checkout.js"
+    },
+    {
+      "src": "/.netlify/functions/stripe-webhook",
+      "dest": "/api/stripe-webhook.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}

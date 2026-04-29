@@ -1,0 +1,8 @@
+{
+  "name": "wonitany",
+  "version": "1.0.0",
+  "description": "Wonita Pet Supplies",
+  "dependencies": {
+    "stripe": "^14.0.0"
+  }
+}
